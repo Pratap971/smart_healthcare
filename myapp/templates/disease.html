@@ -1,0 +1,269 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    
+  </head>
+  <body>
+
+    <style>
+     body { 
+	background: black; /* adjust here*/
+	background: url("https://res.cloudinary.com/jadeli1720/image/upload/v1558063275/circuits.png");
+	background-clip: border-box;
+	background-attachment: fixed;
+	background-blend-mode: overlay;
+	background-position: 0% 0%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: "Raleway", sans-serif;
+	margin: 0px;
+}
+
+#container {
+	max-width: 1400px;
+}
+
+.outer-form {
+	background: rgba(0, 0, 0, 0.75);
+	border-radius: 10px;
+	-webkit-box-shadow: 0px 4px 11px 2px rgba(0, 0, 0, 0.8);
+		-moz-box-shadow: 0px 4px 11px 2px rgba(0, 0, 0, 0.8);
+		 -ms-box-shadow: 0px 4px 11px 2px rgba(0, 0, 0, 0.8);
+		  -o-box-shadow: 0px 4px 11px 2px rgba(0, 0, 0, 0.8);
+	        box-shadow: 0px 4px 11px 2px rgba(0, 0, 0, 0.8);
+	color: white;
+}
+
+#form-header {
+	background: rgba(209, 30, 65, 1);
+	background: -moz-linear-gradient( 45deg,
+		rgba(209, 30, 65, 1) 0%, 
+		rgba(181, 3, 44, 1) 29%,
+		rgba(151, 2, 37, 1) 55%, 
+		rgba(96, 1, 23, 1) 100%
+	);
+	
+	background: -webkit-gradient( left bottom, right top,
+		color-stop(0%, rgba(209, 30, 65, 1)),
+		color-stop(29%, rgba(181, 3, 44, 1)),
+		color-stop(55%, rgba(151, 2, 37, 1)),
+		color-stop(100%, rgba(96, 1, 23, 1))
+	);
+	background: -webkit-linear-gradient(
+		45deg,
+		rgba(209, 30, 65, 1) 0%,
+		rgba(181, 3, 44, 1) 29%,
+		rgba(151, 2, 37, 1) 55%,
+		rgba(96, 1, 23, 1) 100%
+	);
+	background: -o-linear-gradient(
+		45deg,
+		rgba(209, 30, 65, 1) 0%,
+		rgba(181, 3, 44, 1) 29%,
+		rgba(151, 2, 37, 1) 55%,
+		rgba(96, 1, 23, 1) 100%
+	);
+	background: -ms-linear-gradient(
+		45deg,
+		rgba(209, 30, 65, 1) 0%,
+		rgba(181, 3, 44, 1) 29%,
+		rgba(151, 2, 37, 1) 55%,
+		rgba(96, 1, 23, 1) 100%
+	);
+	background: linear-gradient(
+		45deg,
+		rgba(209, 30, 65, 1) 0%,
+		rgba(181, 3, 44, 1) 29%,
+		rgba(151, 2, 37, 1) 55%,
+		rgba(96, 1, 23, 1) 100%
+	);
+	-webkit-box-shadow: inset 0px 3px 9px 3px rgba(0, 0, 0, 0.45);
+		-moz-box-shadow: inset 0px 3px 9px 3px rgba(0, 0, 0, 0.45);
+		 -ms-box-shadow: inset 0px 3px 9px 3px rgba(0, 0, 0, 0.45);
+		  -o-box-shadow: inset 0px 3px 9px 3px rgba(0, 0, 0, 0.45);
+	        box-shadow: inset 0px 3px 9px 3px rgba(0, 0, 0, 0.45);
+	font-family: "Open Sans", sans-serif;
+}
+
+#form-header p {
+	font-size: 22px;
+}
+
+#title {
+	font-weight: 600;
+}
+
+#survey-form {
+	font-size: 20px;
+}
+
+
+/******************** Custom Checkbox and Radio Buttons ********************/
+.custom-container {
+	display: block;
+	position: relative;
+	margin: 10px 0px;
+	padding-left: 40px;
+	cursor: pointer;
+	font-size: 20px;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+}
+
+/* Hide the browser's default checkbox and radio */
+.custom-container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark, .checkmark-radio {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
+	-webkit-transition: all 0.3s ease-in;
+	   -moz-transition: all 0.3s ease-in;
+	     -o-transition: all 0.3s ease-in;
+	        transition: all 0.3s ease-in; 
+}
+
+/* Create a custom radio button shape*/
+.checkmark-radio{
+	border-radius: 50%;
+	
+}
+
+/* On mouse-over, add a grey background color */
+.custom-container:hover input ~ .checkmark, .custom-container:hover input ~ .checkmark-radio {
+	background-color: #04d9ff;
+}
+
+/* When the checkbox/radio button is checked, add a blue background */
+.custom-container input:checked ~ .checkmark, .custom-container input:checked ~ .checkmark-radio {
+	background-color: #B5032C;
+}
+
+/* Create the indicator: dot/circle/checkmark (hidden when not checked) */
+.checkmark:after, .checkmark-radio:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+/* Show the indicator: dot/circle/checkmark  when checked */
+.custom-container input:checked ~ .checkmark:after, .custom-container input:checked ~ .checkmark-radio:after  {
+	display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.custom-container .checkmark-radio:after{
+	top: 7px;
+	left: 7px;
+	width: 10px;
+	height:10px;
+	border-radius: 50%;
+	background: #08ffff;
+}
+
+/* Style the checkmark/indicator */
+.custom-container .checkmark:after {
+	left: 8px;
+	top: 3px;
+	width: 8px;
+	height: 14px;
+	border: solid #08ffff;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+
+} 
+
+
+    </style>
+
+    <main>
+	<div class="container" id="container">
+		<div class="outer-form mt-3">
+			<div class="text-center align-middle py-4" id="form-header">
+				<h1 id="title">Disease Symptoms</h1>
+				<p id="description">Let us know how we can improve Patients Health</p>
+			</div>
+			<div class="col-sm-12 col-lg-6">
+            <form action='/disease/' method="POST">
+              {% csrf_token %}
+						<div class="form-group">
+						<div style="margin:0 auto; width: 150%; text-align:left">
+							<label for="userRating" class="labels mb-4">Symptoms that should be Affect in your Health issues({{info.User_name}}, select Symptoms of Disease ):</label>
+							<div>
+								<label class="container custom-container" for="front"> Fever
+									<input type="checkbox" name="front" id="front" value="front">
+									<span class="checkmark"></span>
+								</label>
+								<label class="container custom-container" for="back"> Diarrhea
+									<input type="checkbox" name="back" id="back" value="back">
+									<span class="checkmark"></span>
+								</label>
+								<label class="container custom-container" for="data"> Fatigue
+									<input type="checkbox" name="data" id="data" value="data">
+									<span class="checkmark"></span>
+								</label>
+								<label class="container custom-container" for="challanges"> Muscle aches
+									<input type="checkbox" name="challanges" id="challanges" value="challanges">
+									<span class="checkmark"></span>
+								</label>
+								<label class="container custom-container" for="git">Coughing
+									<input type="checkbox" name="git" id="git" value="git">
+									<span class="checkmark"></span>
+								</label>
+								<label class="container custom-container" for="video">losing hearing
+									<input type="checkbox" name="video" id="video" value="video">
+									<span class="checkmark"></span>
+								</label>
+								<label class="container custom-container" for="wiki">Paresthesia
+									<input type="checkbox" name="wiki" id="wiki" value="wiki">
+									<span class="checkmark"></span>
+								</label>
+								<label class="container custom-container" for="forum">Light-headed
+									<input type="checkbox" name="forum" id="forum" value="forum">
+									<span class="checkmark"></span>
+								</label>
+								<label class="container custom-container" for="course">Chronic pain
+									<input type="checkbox" name="course" id="course" value="course">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+                            <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block"> Submit Form </button>
+                            </div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>

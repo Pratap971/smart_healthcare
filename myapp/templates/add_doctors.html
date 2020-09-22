@@ -1,0 +1,132 @@
+{% load static %}
+<html>
+<head>
+<form name="/doctors_profle" method="post" enctype="multipart/form-data" action="">
+<title>Doctors_Profile</title>
+<h1>Smart Healthcare Prediction System</h1>
+<h1>Doctors Dashboard</h1>
+</head>
+<body>
+
+<style type="text/css">
+form h1 {
+color: black;
+text-align: center;
+}
+form {
+font-size: 22px;
+color: black;
+}
+input {
+display: block;
+clear: both;
+}
+fieldset {
+margin: 1em 180;
+background-color: transparent;
+}
+label input {
+display: block;
+color: black;
+}
+body {
+background-color:  #D68910  ;
+}
+table{
+    margin: auto 40% auto 40%;
+}
+.button
+{
+  width: 150px;
+  height: 30px;
+  font-size: 22px;
+  background-color: #1ABC9C ;
+  text-align: center;
+  margin:0 auto;
+
+}
+</style>
+ <section class="hero-wrap js-fullheight" style="background-image: url({% static 'images/bg_3.jpg' %});" data-section="home" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+
+	  <form action=" " method="POST" enctype="multipart/form-data">
+	{% csrf_token %}
+<fieldset>
+<h2>Doctors Information</color></h2>
+<table>
+	<div class="container">
+	<tr><td>
+	<img style="margin-left:25px;" src="{% static '/images/avatar.png'%}"  width="200" height="200" />
+	</td>
+	</tr>
+	<tr><td><input type="file" name="image"></td></tr>
+	
+	<tr><td><button type="submit">Upload File</button></td></tr>
+	</table>
+	</div>
+<p>
+	<label for="fullname">User Name</label>
+<input type="text" name="user">
+<label for="fullname">Full Name</label>
+<input type="text" name="name">
+<label for="email">Email Address</label>
+<input type="email" name="email">
+</p>
+<p>
+<label for="dob">Date Of Birth</label>
+<input type="date" name="date" class="form-control appointment_date" placeholder="Date">
+</p>
+<p>
+<label for="address">Residential Address</label>
+<input type="textarea" name="address">
+</p>
+<p>
+<label for="full name">Personal Phone Number </label>
+<input type="tel" name="phone">
+</p>
+
+</section>
+</fieldset>
+<fieldset>
+<h2>Doctors Qualifications</h2>
+<p>
+<label for="wexp">Work Experience in years</label>
+<input type="text" name="Work Experience">
+</p>
+<label for="full haddress">Address Of Hospital Location </label>
+<input type="textarea" name="address2">
+</p>
+<p>
+<label for="option">Specialist</label>
+<div class="">
+		    					<div class="form-group">
+			    					<div class="form-field">
+	          					<div class="select-wrap">
+	                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+	                      <select name="select" class="form-control">
+	                      	<option select>Specialist</option>
+	                        <option value="Neurology">Neurology</option>
+	                        <option value="Cardiology">Cardiology</option>
+	                        <option value="Dental">Dental</option>
+	                        <option value="Ophthalmology">Ophthalmology</option>
+	                        <option value="Other Services">Other Services</option>
+	                      </select>
+	                    </div>
+</p>
+<p>
+<label for="option">Qualifications</label>
+<input type="text" name="Qualifications">
+<!-- <select name="select1">
+<option id="Qualifications">
+<option value="MBBS">MBBS</option>
+<option value="BDS">BDS</option>
+<option value="BAMS">BAMS</option>
+<option value="BUMS">BUMS</option>
+<option value="BHMS">BHMS</option>
+<option value="BYNS">BYNS</option>
+</select> -->
+</fieldset>
+<input class="button" type="submit" value="submit" />
+</form>
+</body>
+</html>

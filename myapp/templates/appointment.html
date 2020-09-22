@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel=" stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %} ">
+    <link rel="stylesheet" href="{% static 'css/animate.css ' %}">
+    
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
+    
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	<div class="py-1 bg-black top">
+	  
+	  <div class="container">
+		  <div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
+			  
+			  <div class="col-lg-12 d-block">
+				  <div class="row d-flex">
+					  <div class="col-md pr-4 d-flex topper align-items-center">
+						  <div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+						  <span class="text">+91 8787020501</span>
+					  </div>
+					  <div class="col-md pr-4 d-flex topper align-items-center">
+						  <div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+						  <span class="text">pratapyadav100895@email.com</span>
+					  </div>
+					  <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right justify-content-end">
+						  
+		  
+						  {% if user.is_authenticated %}
+						  <p class="mb-0 register-link"><a href="#" class="mr-3"> Welcome {{request.user.first_name}}</a><a href="/logout/">Log Out</a></p>
+
+							{% else %}
+							<p class="mb-0 register-link"><a href="register/" class="mr-3">Register</a><a href="login/">Login</a></p>
+							{% endif %}
+							
+					  </div>
+				  </div>
+			  </div>
+		  </div>
+		</div>
+  </div>
+  
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	  <div class="container">
+		  
+		<a class="navbar-brand" href="index.html">Smart Healthcare Predictions</a>
+		<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="oi oi-menu"></span> Menu
+		</button>
+
+		<div class="collapse navbar-collapse" id="ftco-nav">
+		  <ul class="navbar-nav nav ml-auto">
+			<li class="nav-item"><a href="/" class="nav-link"><span>Home</span></a></li>
+			<li class="nav-item"><a href="/departments/" class="nav-link"><span>Departments</span></a></li>
+			<li class="nav-item"><a href="/doctors_login/" class="nav-link"><span>Doctors</span></a></li>
+			<li class="nav-item"><a href="/about/" class="nav-link"><span>About</span></a></li>
+			<li class="nav-item"><a href="/contact_us/" class="nav-link"><span>Contact</span></a></li>
+			
+		  </ul>
+		</div>
+	  </div>
+	</nav>
+
+<section class="ftco-section ftco-no-pt ftco-no-pb ftco-services-2 bg-white" >
+			<div class="container"  style="margin-top: 80px;">
+        <div class="row d-flex">
+	        <div class="col-md-7 py-5">
+	        	<div class="py-lg-5">
+		        	<div class="row justify-content-center pb-5">
+					
+			          <div class="col-md-12 heading-section ftco-animate">
+			            <h2 class="mb-3">BOOK APPOINTMENTS</h2>
+						<h3>{{message}}</h3>
+			          </div>
+			        </div>
+			        <div class="row">
+			        	<div class="col-md-6 d-flex align-self-stretch ftco-animate">
+			            <div class="media block-6 services d-flex">
+			              <div class="icon justify-content-center align-items-center d-flex"><span class="flaticon-ambulance"></span></div>
+			              <div class="media-body pl-md-4">
+			                <h3 class="heading mb-3">Emergency Services</h3>
+			                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+			              </div>
+			            </div>      
+			          </div>
+			          <div class="col-md-6 d-flex align-self-stretch ftco-animate">
+			            <div class="media block-6 services d-flex">
+			              <div class="icon justify-content-center align-items-center d-flex"><span class="flaticon-doctor"></span></div>
+			              <div class="media-body pl-md-4">
+			                <h3 class="heading mb-3">Qualified Doctors</h3>
+			                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+			              </div>
+			            </div>      
+			          </div>
+			          <div class="col-md-6 d-flex align-self-stretch ftco-animate">
+			            <div class="media block-6 services d-flex">
+			              <div class="icon justify-content-center align-items-center d-flex"><span class="flaticon-stethoscope"></span></div>
+			              <div class="media-body pl-md-4">
+			                <h3 class="heading mb-3">Outdoors Checkup</h3>
+			                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+			              </div>
+			            </div>      
+			          </div>
+			          <div class="col-md-6 d-flex align-self-stretch ftco-animate">
+			            <div class="media block-6 services d-flex">
+			              <div class="icon justify-content-center align-items-center d-flex"><span class="flaticon-24-hours"></span></div>
+			              <div class="media-body pl-md-4">
+			                <h3 class="heading mb-3">24 Hours Service</h3>
+			                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+			              </div>
+			            </div>      
+			          </div>
+			        </div>
+			      </div>
+		      </div>
+  <div class="col-md-5 d-flex">
+	        	<div class="appointment-wrap bg-white p-4 p-md-5 d-flex align-items-center">
+		        	<form action="/appointment/" method="POST" class="appointment-form ftco-animate">
+					{% csrf_token %}
+		        		<h3>Free Consultation</h3>
+		    				<div class="">
+			    				<div class="form-group">
+			    					<input type="text" name='fname' class="form-control" placeholder="First Name">
+			    				</div>
+			    				<div class="form-group">
+			    					<input type="text" name='lname' class="form-control" placeholder="Last Name">
+			    				</div>
+		    				</div>
+		    				<div class="">
+		    					<div class="form-group">
+			    					<div class="form-field">
+	          					<div class="select-wrap">
+	                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+	                      <select name="select" class="form-control">
+	                      	<option select>Select Your Services</option>
+	                        <option value="Neurology">Neurology</option>
+	                        <option value="Cardiology">Cardiology</option>
+	                        <option value="Dental">Dental</option>
+	                        <option value="Ophthalmology">Ophthalmology</option>
+	                        <option value="Other Services">Other Services</option>
+	                      </select>
+	                    </div>
+						  </div>
+						</div>
+						
+						
+						<table class="table table-borderless">
+							<tbody>
+							  <tr>
+								<td><div class="input-group mb-3">
+									<div class="input-group-prepend">
+									  <div class="input-group-text">
+										<input type="checkbox" name="Fever" aria-label="Checkbox for following text input">
+									 </div>
+									</div>&nbsp;  Fever
+								  </div></td>
+								
+								<td><div class="input-group mb-3">
+									<div class="input-group-prepend">
+									  <div class="input-group-text">
+										<input type="checkbox" name="Diarrhea" aria-label="Checkbox for following text input">
+									 </div>&nbsp; Diarrhea
+									</div>
+								  </div></td>
+							  </tr>
+							  <tr>
+								<td><div class="input-group mb-3">
+									<div class="input-group-prepend">
+									  <div class="input-group-text">
+										<input type="checkbox" name="Fatigue" aria-label="Checkbox for following text input">
+									 </div>
+									</div>&nbsp;  Fatigue
+								  </div></td>
+								
+								<td><div class="input-group mb-3">
+									<div class="input-group-prepend">
+									  <div class="input-group-text">
+										<input type="checkbox" name="Muscle aches" aria-label="Checkbox for following text input">
+									 </div>&nbsp; Muscle aches
+									</div>
+								  </div></td>
+							  </tr>
+							  
+							  <tr>
+								<td><div class="input-group mb-3">
+									<div class="input-group-prepend">
+									  <div class="input-group-text">
+										<input type="checkbox" name="Coughing" aria-label="Checkbox for following text input">
+									 </div>
+									</div>&nbsp;  Coughing
+								  </div></td>
+								
+								<td><div class="input-group mb-3">
+									<div class="input-group-prepend">
+									  <div class="input-group-text">
+										<input type="checkbox" name="losing hearing" aria-label="Checkbox for following text input">
+									 </div>&nbsp; losing hearing
+									</div>
+								  </div></td>
+							  </tr>
+
+							  <tr>
+								<td><div class="input-group mb-3">
+									<div class="input-group-prepend">
+									  <div class="input-group-text">
+										<input type="checkbox" name="Paresthesia" aria-label="Checkbox for following text input">
+									 </div>
+									</div>&nbsp;  Paresthesia
+								  </div></td>
+								
+								<td><div class="input-group mb-3">
+									<div class="input-group-prepend">
+									  <div class="input-group-text">
+										<input type="checkbox" name="Light-headed" aria-label="Checkbox for following text input">
+									 </div>&nbsp; Light-headed 
+									</div>
+								  </div></td>
+							  </tr>
+
+							  <tr>
+								<td><div class="input-group mb-3">
+									<div class="input-group-prepend">
+									  <div class="input-group-text">
+										<input type="checkbox" name="Chronic pain" aria-label="Checkbox for following text input">
+									 </div>
+									</div>&nbsp;  Chronic pain
+								  </div></td>
+							  </tr>
+							</tbody>
+						  </table>
+			    				
+		    					<div class="form-group">
+			    					<input type="text" name="phone" class="form-control" placeholder="Phone">
+			    				</div>
+		    				</div>
+		    				<div class="">
+			    				<div class="form-group">
+			    					<div class="input-wrap">
+			            		<div class="icon"><span class="#"></span></div>
+			            		<input type="date" name="date" class="form-control appointment_date" placeholder="Date">
+		            		</div>
+			    				</div>
+			    				<div class="form-group">
+			    					<div class="input-wrap">
+			            		<div class="icon"><span class="#"></span></div>
+			            		<input type="time" name="time" class="form-control appointment_time" placeholder="Time">
+		            		</div>
+			    				</div>
+		    				</div>
+		    				<div class="">
+		    					<div class="form-group">
+			              <textarea cols="30" name="mes" rows="2" class="form-control" placeholder="Message"></textarea>
+			            </div>
+			            <div class="form-group">
+			              <input type="submit" value="Appointment" class="btn btn-secondary py-3 px-4">
+			            </div>
+		    				</div>
+		    			</form>
+		    		</div>
+	        </div>
+		    </div>
+			</div>
+		</section>
+
+    <section class="ftco-intro img" style="background-image: url(images/bg_2.jpg);">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-9 text-center">
+						<h2>Your Health is Our Priority</h2>
+						<p>We can manage your dream building A small river named Duden flows by their place</p>
+						<p class="mb-0"><a href="#" class="btn btn-white px-4 py-3">Search Places</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+  
+     
+    
+  
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+  <script src="{% static 'js/scrollax.min.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+    
+  </body>
+</html>

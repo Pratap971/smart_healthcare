@@ -1,0 +1,133 @@
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<form name="/doctors_profle" method="post" enctype="multipart/form-data">
+
+<title>Doctors_Profile</title>
+<h1>Smart Healthcare Prediction System</h1>
+<h1>Doctors Dashboard</h1>
+
+<style type="text/css">
+    form h1 {
+    color: black;
+    text-align: center;
+    }
+    form {
+    font-size: 22px;
+    color: black;
+    }
+    input {
+    display: block;
+    clear: both;
+    }
+    fieldset {
+    margin: 1em 180;
+    background-color: transparent;
+    }
+    label input {
+    display: block;
+    color: black;
+    }
+    body {
+    background-color:  #D68910  ;
+    }
+    
+    .button
+    {
+      width: 150px;
+      height: 30px;
+      font-size: 22px;
+      background-color: #1ABC9C ;
+      text-align: center;
+      margin:0 auto;
+    
+    }
+    </style>
+</head>
+<body>
+
+ <section class="hero-wrap js-fullheight" style="background-image: url({% static 'images/bg_3.jpg' %});" data-section="home" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+
+	  <form  method="POST" enctype="multipart/form-data">
+	{% csrf_token %}
+<fieldset>
+<h2>Doctors Information</color></h2>
+
+	
+	<img class="my-3" src="/media/{{user_info.Img}}"  width="200" height="200" />
+
+<p>
+	<label for="fullname">User Name</label>
+<input type="text" value="{{user_info.user}}" name="user" readonly>
+<label for="fullname">Full Name</label>
+<input type="text" value="{{user_info.FullName}}" name="name">
+<label for="email">Email Address</label>
+<input type="email" value="{{user_info.email}}" name="email" readonly>
+</p>
+<p>
+<label for="dob">Date Of Birth</label>
+<input type="textarea" name="date" value="{{user_info.DateofBirth}}" readonly>
+</p>
+<p>
+<label for="address">Residential Address</label>
+<input type="textarea" value="{{user_info.address}}" name="address" readonly>
+</p>
+<p>
+<label for="full name">Personal Phone Number </label>
+<input type="tel" value="{{user_info.Phone}}" name="phone" readonly>
+</p>
+
+</section>
+</fieldset>
+<fieldset>
+<h2>Doctors Qualifications</h2>
+<p>
+<label for="wexp">Work Experience in years</label>
+<input type="text" value="{{user_info.Experience}}" name="Work Experience" readonly>
+</p>
+<p>
+<label for="full haddress">Address Of Hospital Location </label>
+<input type="textarea" value="{{user_info.address_of_Hospital}}" name="address2" readonly>
+</p>
+<p>
+<label for="option">Specialist</label>
+<input type="option" value="{{user_info.Specialist}}" name="Specialist" readonly>
+</p>
+<p>
+<label for="option">Qualifications</label>
+<input type="text" value="{{user_info.Qualifications}}" name="Qualifications" readonly>
+<br>
+{% if appointment %}
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Patient Name</th>
+        <th scope="col">Disease</th> 
+      </tr>
+    </thead>
+    <tbody>
+        {% for cust in appointment %}
+      <tr>
+        <th scope="row">{{cust.First_name}} {{cust.Last_name}}</th>
+        <td>{{cust.Disease}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endif %}
+
+</p>
+</fieldset>
+
+
+
+</form>
+
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
