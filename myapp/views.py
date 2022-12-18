@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import UserprofileInfo, Appointment,Doctor_info
+from .models import UserprofileInfo, Appointment, Doctor_info
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
@@ -16,7 +16,7 @@ from django.contrib.auth import update_session_auth_hash
 # Create your views here.
 
 def Index(request):
-    return render(request, 'index.html')
+    return render(request,'Index.html')
 
 def register(request):
     if request.method == 'POST':
