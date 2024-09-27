@@ -2,15 +2,22 @@
 
 We are making an online web-based application named Smart Healthcare. Here we propose a system that allows users to get instant guidance on their health issues through a health care system online. The system is fed with various symptoms and diseases associated with that system. The system is first taught with multiple symptoms and the disease associated with each system. Smart Healthcare is an end-user support and online consultation project. 
 
-#Module Description 
+# Module Description 
 
 Admin Login: Admin can log in to the system using his ID and Password. 
-Add Doctor: The admin can add new doctor details to the database. 
-Add Disease: Admin can add disease details along with symptoms and type. 
+
+Add Doctor: The admin can add new doctor details to the database.
+
+Add Disease: Admin can add disease details along with symptoms and type.
+
 View Doctor: The Admin can view various doctors and their details. 
+
 View Disease: Admin can view various disease details stored in the database. 
+
 View Patient: The Admin can view various patient details that have accessed the System.
+
 Appointment: Users can request an Appointment with their disease symptoms and the doctor can see all the requests and confirm the Appointment if he/she has not scheduled any appointments.
+
 Departments: There are various kinds of departments available like Neurology, ophthalmology, Nuclear magnetic, Surgical, Cardiology, X-ray, Dental, Traumatology,   etc.
                  
 # GOALS AND OBJECTIVE 
@@ -20,7 +27,7 @@ The aim is to build a fully functional system to achieve efficiency in faster he
 
 # Used Tools & Languages 
 
--- Python, Django, Html, CSS, Bootstrap5,  Sqlite3 
+- Python, Django, Html, CSS, Bootstrap5,  Sqlite3 
 
 
 # Screenshots :
